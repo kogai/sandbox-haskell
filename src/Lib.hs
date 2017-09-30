@@ -1,5 +1,5 @@
 module Lib (
-    someFunc,
+    someFunc  ,
     fib
 ) where
 
@@ -12,3 +12,6 @@ fib :: Int -> Int
 fib 0 = 0
 fib 1 = 1
 fib n = fib (n - 1) + fib (n - 2)
+
+f :: Int -> String
+f n = n
