@@ -1,7 +1,7 @@
-module Lib
-    ( someFunc,
+module Lib (
+    someFunc,
     fib
-    ) where
+) where
 
 someFunc :: IO ()
 someFunc = putStrLn "Hello world"
@@ -11,4 +11,4 @@ someFunc = putStrLn "Hello world"
 fib :: Int -> Int
 fib 0 = 0
 fib 1 = 1
-fib n = (fib $ n - 1) + (fib $ n - 2)
+fib n = fib (n - 1) + fib (n - 2)
