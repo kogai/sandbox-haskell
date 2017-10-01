@@ -1,9 +1,11 @@
 module Lib (
     someFunc
   , fib
+  , toUpperS
   , f
 ) where
 
+import           Data.Char
 import           Debug.Trace
 
 someFunc :: IO ()
@@ -18,3 +20,9 @@ fib n = fib (n - 1) + fib (n - 2)
 
 f :: Int -> String
 f n = trace ("function [f] called with [" ++ show n ++ "]!!!") $ show $ fib n
+
+toUpperS :: String -> String
+-- toUpperS []     = ""
+-- toUpperS (x:xs) = toUpper x:toUpperS xs
+-- HLint prefer fold than explicit recursion
+toUpperS = foldr ((:) . toUpper) ""
