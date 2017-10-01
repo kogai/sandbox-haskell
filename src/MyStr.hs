@@ -3,7 +3,6 @@ module MyStr (
 ) where
 
 import           Data.Char (toUpper)
--- import           Data.Foldable
 
 toUpperAll :: String -> String
 -- toUpperS []     = ""

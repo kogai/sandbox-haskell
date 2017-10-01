@@ -1,13 +1,14 @@
+
 module Lib (
     someFunc
   , fib
-  , f
+--   , f
 ) where
 
 import           Data.Char
 import           Debug.Trace
+-- import           MyStr
 
-import           MyStr       (toUpperAll)
 
 someFunc :: IO ()
 someFunc = putStrLn    "Hello world"
@@ -19,5 +20,5 @@ fib 0 = 0
 fib 1 = 1
 fib n = fib (n - 1) + fib (n - 2)
 
-f :: Int -> String
-f n = trace (toUpperAll $ "function [f] called with [" ++ show n ++ "]!!!") $ show $ fib n
+-- f :: Int -> String
+-- f n = trace (toUpperAll $ "function [f] called with [" ++ show n ++ "]!!!") $ show $ fib n
